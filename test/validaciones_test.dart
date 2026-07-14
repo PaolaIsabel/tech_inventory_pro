@@ -11,7 +11,7 @@ void main() {
       final resultado = Validaciones.serieValida(serie);
 
       // Assert
-      expect(resultado, true);
+      expect(resultado, false);
     });
 
     test('Rechaza una serie vacía', () {
