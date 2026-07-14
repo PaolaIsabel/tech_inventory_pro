@@ -10,7 +10,8 @@ on:
       - main
 
 jobs:
-  test:
+  analyze:
+    name: Flutter Analyze
     runs-on: ubuntu-latest
 
     steps:
@@ -18,10 +19,23 @@ jobs:
 
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.44.1'
+          flutter-version: "3.44.1"
 
       - run: flutter pub get
 
       - run: flutter analyze
+
+  test:
+    name: Unit Tests + Coverage
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.44.1"
+
+      - run: flutter pub get
 
       - run: flutter test --coverage
