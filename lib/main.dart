@@ -3,7 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'screens/dashboard/dashboard_screen.dart';
 
-esto_va_a_fallar;
 void main() {
   runApp(
     const ProviderScope(
