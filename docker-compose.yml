@@ -1,0 +1,9 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tech-inventory-container
+    restart: unless-stopped
+    ports:
+      - "50000:80"

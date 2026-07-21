@@ -2,7 +2,7 @@ class DatabaseConstants {
   DatabaseConstants._();
 
   static const String databaseName = "tech_inventory.db";
-  static const int databaseVersion = 1;
+  static const int databaseVersion = 3;
 
   static const String categoriaTable = "categoria";
   static const String activoTable = "activo";

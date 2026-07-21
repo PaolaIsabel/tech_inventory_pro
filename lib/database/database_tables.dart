@@ -31,6 +31,7 @@ class DatabaseTables {
   CREATE TABLE computadora(
     idComputadora INTEGER PRIMARY KEY AUTOINCREMENT,
     idActivo INTEGER NOT NULL,
+    tipoComputadora TEXT,
     procesador TEXT,
     ram TEXT,
     almacenamiento TEXT,
@@ -90,5 +91,10 @@ class DatabaseTables {
     responsableTI TEXT,
     FOREIGN KEY(idActivo) REFERENCES activo(idActivo)
   );
+  ''';
+  // Migración: agrega código patrimonial sin eliminar datos existentes
+  static const String migrationAddCodigoPatrimonial = '''
+  ALTER TABLE activo
+  ADD COLUMN codigoPatrimonial TEXT;
   ''';
 }
