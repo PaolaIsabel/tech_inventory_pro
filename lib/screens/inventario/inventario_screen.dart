@@ -855,7 +855,7 @@ class _InventarioScreenState extends ConsumerState<InventarioScreen> {
 
       ref.invalidate(activosProvider);
 
-      if (!mounted) return;
+      if (!context.mounted) return;
 
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
@@ -865,7 +865,7 @@ class _InventarioScreenState extends ConsumerState<InventarioScreen> {
         ),
       );
     } catch (e) {
-      if (!mounted) return;
+      if (!context.mounted) return;
 
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
