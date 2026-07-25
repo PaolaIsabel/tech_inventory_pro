@@ -18,7 +18,7 @@ class TechInventoryApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "TechInventory Pro",
+      title: "TechInventory - Demo Final",
       theme: ThemeData(
         useMaterial3: true,
         colorSchemeSeed: Colors.indigo,

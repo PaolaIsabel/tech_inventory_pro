@@ -1,8 +1,7 @@
 class Activo {
   final int? idActivo;
-
+  final int idCategoria;
   final String serie;
-  final String tipoActivo;
   final String marca;
   final String modelo;
   final String estado;
@@ -15,8 +14,8 @@ class Activo {
 
   const Activo({
     this.idActivo,
+    required this.idCategoria,
     required this.serie,
-    required this.tipoActivo,
     required this.marca,
     required this.modelo,
     required this.estado,
@@ -31,8 +30,8 @@ class Activo {
   Map<String, dynamic> toMap() {
     return {
       'idActivo': idActivo,
+      'idCategoria': idCategoria,
       'serie': serie,
-      'tipoActivo': tipoActivo,
       'marca': marca,
       'modelo': modelo,
       'estado': estado,
@@ -48,8 +47,8 @@ class Activo {
   factory Activo.fromMap(Map<String, dynamic> map) {
     return Activo(
       idActivo: map['idActivo'],
+      idCategoria: map['idCategoria'],
       serie: map['serie'],
-      tipoActivo: map['tipoActivo'],
       marca: map['marca'],
       modelo: map['modelo'],
       estado: map['estado'],
